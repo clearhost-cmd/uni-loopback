@@ -7,7 +7,7 @@ export async function migrate(args: string[]) {
   const app = new BackendApplication();
   await app.boot();
   await app.migrateSchema({
-    models: [ 'Users', 'Posts', 'Replies', 'Tags' ]
+    models: [ 'Users', 'Tags', 'Posts', 'Replies' ]
   });
 
   // Connectors usually keep a pool of opened connections,
