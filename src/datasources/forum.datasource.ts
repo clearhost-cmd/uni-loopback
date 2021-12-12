@@ -5,11 +5,11 @@ const config = {
   name: 'forum',
   connector: 'mysql',
   url: '',
-  host: 'dj1699768-001.dbaas.ovh.net',
+  host: 'eu-cdbr-west-02.cleardb.net',
   port: 35710,
-  user: 's78zjaxa',
-  password: 'jUSkja71j',
-  database: 'aj7shAAs'
+  user: 'b79c1ba9690de3',
+  password: 'dcf66a74',
+  database: 'heroku_453bf256b559c63'
 };
 
 // Observe application's life cycle to disconnect the datasource when
