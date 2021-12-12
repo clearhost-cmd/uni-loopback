@@ -78,7 +78,6 @@ describe('UsersEndpoint', () => {
 
     it('tests user creation', async () => {
         const user = await givenUser({
-            created: null,
             name: 'Jonah',
             password: 'password'
         });

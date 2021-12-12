@@ -17,7 +17,7 @@ export class Users extends Entity {
     required: false,
     default: () => new Date(),
   })
-  created?: any;
+  created?: Date;
 
   @property({
     type: 'string',

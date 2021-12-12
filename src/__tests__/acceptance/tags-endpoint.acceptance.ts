@@ -66,7 +66,6 @@ describe('TagsEndpoint', () => {
 
     it('tests tag creation', async () => {
         const user = await givenUser({
-            created: null,
             name: 'Jonah',
             password: 'password'
         });
@@ -75,7 +74,6 @@ describe('TagsEndpoint', () => {
             created: null,
             title: 'Some Title',
             body: 'Some Body',
-            user_id: 1
         });
 
         const expected = Object.assign({id: tag.id}, tag);
