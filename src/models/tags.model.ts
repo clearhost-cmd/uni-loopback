@@ -29,7 +29,7 @@ export class Tags extends Entity {
     required: false,
     default: () => new Date(),
   })
-  created?: any;
+  created?: Date;
 
   @property({
     type: 'string',
@@ -51,14 +51,14 @@ export class Tags extends Entity {
   @property({
     type: 'string',
     required: true,
-    length: 350,
+    length: 100,
 
     index: {
       unique: true
     },
 
     jsonSchema: {
-      maxLength: 350,
+      maxLength: 100,
       minLength: 25,
       errorMessage: 'Tag body must be at least 10 characters and maximum 350 characters',
     },

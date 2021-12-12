@@ -60,14 +60,14 @@ export class Posts extends Entity {
   @property({
     type: 'string',
     required: true,
-    length: 350,
+    length: 100,
 
     index: {
       unique: true
     },
 
     jsonSchema: {
-      maxLength: 350,
+      maxLength: 100,
       minLength: 25,
       errorMessage: 'Post Body must be 25 to 350 characters long.',
     },

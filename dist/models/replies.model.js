@@ -24,7 +24,7 @@ let Replies = class Replies extends repository_1.Entity {
         required: false,
         default: () => new Date(),
     }),
-    (0, tslib_1.__metadata)("design:type", Object)
+    (0, tslib_1.__metadata)("design:type", Date)
 ], Replies.prototype, "created", void 0);
 (0, tslib_1.__decorate)([
     (0, repository_1.property)({
@@ -46,12 +46,12 @@ let Replies = class Replies extends repository_1.Entity {
     (0, repository_1.property)({
         type: 'string',
         required: true,
-        length: 350,
+        length: 100,
         index: {
             unique: true
         },
         jsonSchema: {
-            maxLength: 350,
+            maxLength: 100,
             minLength: 25,
             errorMessage: 'Reply body must be at least 25 characters and maximum 350 characters',
         },

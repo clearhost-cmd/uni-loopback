@@ -1,7 +1,7 @@
 import { Entity } from '@loopback/repository';
 export declare class Replies extends Entity {
     id?: number;
-    created?: any;
+    created?: Date;
     title: string;
     body: string;
     user_id: number;

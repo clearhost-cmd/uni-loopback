@@ -47,12 +47,12 @@ let Users = class Users extends repository_1.Entity {
     (0, repository_1.property)({
         type: 'string',
         required: true,
-        length: 350,
+        length: 100,
         index: {
             unique: true
         },
         jsonSchema: {
-            maxLength: 350,
+            maxLength: 100,
             minLength: 25,
             errorMessage: 'Password must be at least 25 characters and maximum 350 characters',
         },

@@ -37,7 +37,7 @@ export class Replies extends Entity {
     required: false,
     default: () => new Date(),
   })
-  created?: any;
+  created?: Date;
 
   @property({
     type: 'string',
@@ -59,14 +59,14 @@ export class Replies extends Entity {
   @property({
     type: 'string',
     required: true,
-    length: 350,
+    length: 100,
 
     index: {
       unique: true
     },
 
     jsonSchema: {
-      maxLength: 350,
+      maxLength: 100,
       minLength: 25,
       errorMessage: 'Reply body must be at least 25 characters and maximum 350 characters',
     },

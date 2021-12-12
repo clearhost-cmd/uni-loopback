@@ -9,7 +9,7 @@ const config = {
     connector: 'mysql',
     url: '',
     host: 'eu-cdbr-west-02.cleardb.net',
-    port: 35710,
+    port: 3306,
     user: 'b79c1ba9690de3',
     password: 'dcf66a74',
     database: 'heroku_453bf256b559c63'

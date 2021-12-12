@@ -61,7 +61,6 @@ describe('TagsEndpoint', () => {
             password: 'password'
         });
         const tag = await (0, database_helpers_1.givenTag)({
-            created: null,
             title: 'Some Title',
             body: 'Some Body',
         });

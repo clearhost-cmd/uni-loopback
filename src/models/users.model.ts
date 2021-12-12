@@ -39,14 +39,14 @@ export class Users extends Entity {
   @property({
     type: 'string',
     required: true,
-    length: 350,
+    length: 100,
 
     index: {
       unique: true
     },
 
     jsonSchema: {
-      maxLength: 350,
+      maxLength: 100,
       minLength: 25,
       errorMessage: 'Password must be at least 25 characters and maximum 350 characters',
     },

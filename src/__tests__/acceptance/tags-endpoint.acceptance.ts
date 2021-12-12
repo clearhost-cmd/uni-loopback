@@ -71,7 +71,6 @@ describe('TagsEndpoint', () => {
         });
 
         const tag = await givenTag({
-            created: null,
             title: 'Some Title',
             body: 'Some Body',
         });
