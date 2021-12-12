@@ -4,12 +4,12 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'forum',
   connector: 'mysql',
-  url: '',
-  host: 'localhost',
+  url: 'sql4.freemysqlhosting.net',
+  host: 'sql4.freemysqlhosting.net',
   port: 3306,
-  user: 'root',
-  password: '',
-  database: 'forum'
+  user: 'sql4458406',
+  password: 'WwVnecYjP8',
+  database: 'sql4458406'
 };
 
 // Observe application's life cycle to disconnect the datasource when
