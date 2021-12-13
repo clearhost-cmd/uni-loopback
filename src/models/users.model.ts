@@ -31,7 +31,7 @@ export class Users extends Entity {
     jsonSchema: {
       maxLength: 50,
       minLength: 25,
-      errorMessage: 'User Name must be 25 to 100 characters long.',
+      errorMessage: 'User Name must be 25 to 50 characters long.',
     },
   })
   name: string;

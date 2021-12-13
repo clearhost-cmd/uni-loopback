@@ -43,7 +43,7 @@ export class Tags extends Entity {
     jsonSchema: {
       maxLength: 50,
       minLength: 25,
-      errorMessage: 'Tag Title must be 25 to 100 characters long.',
+      errorMessage: 'Tag Title must be 25 to 50 characters long.',
     },
   })
   title: string;
