@@ -69,7 +69,7 @@ export class Posts extends Entity {
     jsonSchema: {
       maxLength: 100,
       minLength: 25,
-      errorMessage: 'Post Body must be 25 to 350 characters long.',
+      errorMessage: 'Post Body must be 25 to 100 characters long.',
     },
   })
   body: string;
