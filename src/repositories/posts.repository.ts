@@ -19,7 +19,10 @@ export class PostsRepository extends DefaultCrudRepository<
   public readonly replies: HasManyRepositoryFactory<Replies, typeof Posts.prototype.id>;
 
   constructor(
-    @inject('datasources.forum') dataSource: ForumDataSource, @repository.getter('UsersRepository') protected usersRepositoryGetter: Getter<UsersRepository>, @repository.getter('TagsRepository') protected tagsRepositoryGetter: Getter<TagsRepository>, @repository.getter('RepliesRepository') protected repliesRepositoryGetter: Getter<RepliesRepository>,
+    @inject('datasources.forum') dataSource: ForumDataSource, @repository.getter('UsersRepository') 
+    protected usersRepositoryGetter: Getter<UsersRepository>, @repository.getter('TagsRepository') 
+    protected tagsRepositoryGetter: Getter<TagsRepository>, @repository.getter('RepliesRepository') 
+    protected repliesRepositoryGetter: Getter<RepliesRepository>,
   ) {
     super(Posts, dataSource);
     this.replies = this.createHasManyRepositoryFactoryFor('replies', repliesRepositoryGetter,);
