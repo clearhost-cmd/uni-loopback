@@ -59,8 +59,8 @@ export class Tags extends Entity {
 
     jsonSchema: {
       maxLength: 100,
-      minLength: 25,
-      errorMessage: 'Tag Body must be 10 to 20 characters long.',
+      minLength: 10,
+      errorMessage: 'Tag Body must be 10 to 100 characters long.',
     },
   })
   body: string;
