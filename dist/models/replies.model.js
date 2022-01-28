@@ -37,7 +37,7 @@ let Replies = class Replies extends repository_1.Entity {
         jsonSchema: {
             maxLength: 50,
             minLength: 25,
-            errorMessage: 'Reply title must be at least 25 characters and maximum 50 characters',
+            errorMessage: 'Reply Title must be 25 to 50 characters long.',
         },
     }),
     (0, tslib_1.__metadata)("design:type", String)
@@ -53,7 +53,7 @@ let Replies = class Replies extends repository_1.Entity {
         jsonSchema: {
             maxLength: 100,
             minLength: 25,
-            errorMessage: 'Reply body must be at least 25 characters and maximum 350 characters',
+            errorMessage: 'Reply Body must be 25 to 100 characters long.',
         },
     }),
     (0, tslib_1.__metadata)("design:type", String)

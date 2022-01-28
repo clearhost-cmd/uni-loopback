@@ -22,6 +22,23 @@ export class Users extends Entity {
   @property({
     type: 'string',
     required: true,
+    length: 20,
+
+    index: {
+      unique: true
+    },
+
+    jsonSchema: {
+      maxLength: 20,
+      minLength: 10,
+      errorMessage: 'User Name must be 10 to 20 characters long.',
+    },
+  })
+  name: string;
+
+  @property({
+    type: 'string',
+    required: true,
     length: 50,
 
     index: {
@@ -30,25 +47,8 @@ export class Users extends Entity {
 
     jsonSchema: {
       maxLength: 50,
-      minLength: 25,
-      errorMessage: 'User Name must be 25 to 50 characters long.',
-    },
-  })
-  name: string;
-
-  @property({
-    type: 'string',
-    required: true,
-    length: 100,
-
-    index: {
-      unique: true
-    },
-
-    jsonSchema: {
-      maxLength: 100,
-      minLength: 25,
-      errorMessage: 'User Password must be 25 to 100 characters long.',
+      minLength: 20,
+      errorMessage: 'User Password must be 20 to 50 characters long.',
     },
   })
   password: string;

@@ -34,16 +34,16 @@ export class Tags extends Entity {
   @property({
     type: 'string',
     required: true,
-    length: 50,
+    length: 20,
 
     index: {
       unique: true
     },
 
     jsonSchema: {
-      maxLength: 50,
-      minLength: 25,
-      errorMessage: 'Tag Title must be 25 to 50 characters long.',
+      maxLength: 20,
+      minLength: 10,
+      errorMessage: 'Tag Title must be 10 to 20 characters long.',
     },
   })
   title: string;
@@ -60,7 +60,7 @@ export class Tags extends Entity {
     jsonSchema: {
       maxLength: 100,
       minLength: 25,
-      errorMessage: 'Tag Body must be 25 to 100 characters long.',
+      errorMessage: 'Tag Body must be 10 to 20 characters long.',
     },
   })
   body: string;

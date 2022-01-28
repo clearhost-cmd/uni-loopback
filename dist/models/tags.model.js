@@ -37,7 +37,7 @@ let Tags = class Tags extends repository_1.Entity {
         jsonSchema: {
             maxLength: 50,
             minLength: 25,
-            errorMessage: 'Tag title must be at least 25 characters and maximum 50 characters',
+            errorMessage: 'Tag Title must be 25 to 50 characters long.',
         },
     }),
     (0, tslib_1.__metadata)("design:type", String)
@@ -53,7 +53,7 @@ let Tags = class Tags extends repository_1.Entity {
         jsonSchema: {
             maxLength: 100,
             minLength: 25,
-            errorMessage: 'Tag body must be at least 10 characters and maximum 350 characters',
+            errorMessage: 'Tag Body must be 25 to 100 characters long.',
         },
     }),
     (0, tslib_1.__metadata)("design:type", String)
