@@ -31,14 +31,14 @@ let Users = class Users extends repository_1.Entity {
     (0, repository_1.property)({
         type: 'string',
         required: true,
-        length: 50,
+        length: 20,
         index: {
             unique: true
         },
         jsonSchema: {
-            maxLength: 50,
-            minLength: 25,
-            errorMessage: 'User Name must be 25 to 50 characters long.',
+            maxLength: 20,
+            minLength: 10,
+            errorMessage: 'User Name must be 10 to 20 characters long.',
         },
     }),
     (0, tslib_1.__metadata)("design:type", String)
@@ -47,14 +47,14 @@ let Users = class Users extends repository_1.Entity {
     (0, repository_1.property)({
         type: 'string',
         required: true,
-        length: 100,
+        length: 50,
         index: {
             unique: true
         },
         jsonSchema: {
-            maxLength: 100,
-            minLength: 25,
-            errorMessage: 'User Password must be 25 to 100 characters long.',
+            maxLength: 50,
+            minLength: 20,
+            errorMessage: 'User Password must be 20 to 50 characters long.',
         },
     }),
     (0, tslib_1.__metadata)("design:type", String)

@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const testlab_1 = require("@loopback/testlab");
 const test_helper_1 = require("./test-helper");
 const database_helpers_1 = require("../helpers/database.helpers");
 describe('UsersEndpoint', () => {
@@ -60,18 +59,6 @@ describe('UsersEndpoint', () => {
             "password": 'Less than 25 min-length'
         })
             .expect(422);
-    });
-    /**
-     * Integration Testing
-     */
-    it('tests user creation', async () => {
-        const user = await (0, database_helpers_1.givenUser)({
-            name: 'Jonah',
-            password: 'password'
-        });
-        const expected = Object.assign({ id: user.id }, user);
-        const response = await client.get('/users');
-        (0, testlab_1.expect)(response.body).to.containEql(expected);
     });
 });
 //# sourceMappingURL=users-endpoint.acceptance.js.map

@@ -71,21 +71,4 @@ describe('UsersEndpoint', () => {
         })
         .expect(422);
   });
-
-  /**
-   * Integration Testing
-   */
-
-    it('tests user creation', async () => {
-        const user = await givenUser({
-            name: 'Jonah',
-            password: 'password'
-        });
-
-        const expected = Object.assign({id: user.id}, user);
-
-        const response = await client.get('/users');
-
-        expect(response.body).to.containEql(expected);
-    });
 });

@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const testlab_1 = require("@loopback/testlab");
 const test_helper_1 = require("./test-helper");
 const database_helpers_1 = require("../helpers/database.helpers");
 describe('TagsEndpoint', () => {
@@ -54,19 +53,6 @@ describe('TagsEndpoint', () => {
             "body": 'Less than 25 min-length'
         })
             .expect(422);
-    });
-    it('tests tag creation', async () => {
-        const user = await (0, database_helpers_1.givenUser)({
-            name: 'Jonah',
-            password: 'password'
-        });
-        const tag = await (0, database_helpers_1.givenTag)({
-            title: 'Some Title',
-            body: 'Some Body',
-        });
-        const expected = Object.assign({ id: tag.id }, tag);
-        const response = await client.get('/tags');
-        (0, testlab_1.expect)(response.body).to.containEql(expected);
     });
 });
 //# sourceMappingURL=tags-endpoint.acceptance.js.map

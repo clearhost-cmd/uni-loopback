@@ -63,22 +63,4 @@ describe('TagsEndpoint', () => {
         })
         .expect(422);
   });
-
-    it('tests tag creation', async () => {
-        const user = await givenUser({
-            name: 'Jonah',
-            password: 'password'
-        });
-
-        const tag = await givenTag({
-            title: 'Some Title',
-            body: 'Some Body',
-        });
-
-        const expected = Object.assign({id: tag.id}, tag);
-
-        const response = await client.get('/tags');
-
-        expect(response.body).to.containEql(expected);
-    });
 });
